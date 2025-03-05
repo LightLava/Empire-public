@@ -16,7 +16,7 @@ using Content.Shared.Clothing.Components;
 
 namespace Content.Shared.Item;
 
-public abstract class SharedItemSystem : EntitySystem
+public abstract partial class SharedItemSystem : EntitySystem
 {
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
@@ -33,6 +33,8 @@ public abstract class SharedItemSystem : EntitySystem
         SubscribeLocalEvent<ItemComponent, ExaminedEvent>(OnExamine);
 
         SubscribeLocalEvent<ItemToggleSizeComponent, ItemToggledEvent>(OnItemToggle);
+
+        InitializeSupplementation();
     }
 
     private void OnItemAutoState(EntityUid uid, ItemComponent component, ref AfterAutoHandleStateEvent args)

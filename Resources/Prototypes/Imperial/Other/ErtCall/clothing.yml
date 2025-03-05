@@ -115,7 +115,7 @@
     clothingPrototype: ClothingHeadHelmetCBURNLeader
 
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ClothingHeadHardsuitBase , ClothingHeadSuitWithLightBase]
   id: ClothingHeadHelmetCBURNLeader
   noSpawn: true
   name: CBURN exosuit helmet

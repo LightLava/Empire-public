@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ClothingHeadHardsuitBase , ClothingHeadSuitWithLightBase]
   id: EngSuitTwo
   noSpawn: true
   name: Helmet from the suit of the bio-engineer S-o.N.A

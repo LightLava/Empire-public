@@ -101,10 +101,10 @@ public sealed partial class ElectroMouseSystem : EntitySystem
 
         AddEnergy(uid, component, 9999);
 
-        component.DashEnergy = component.DashEnergy + 2;
-        component.EmpRadius = component.EmpRadius + 7;
-        component.Duration = component.Duration + 2;
-        component.HealingStrength = component.HealingStrength + 5;
+        component.DashEnergy += 2;
+        component.EmpRadius += 7;
+        component.Duration += 2;
+        component.HealingStrength += 5;
 
         _action.RemoveAction(uid, component.Action);
     }
@@ -249,7 +249,7 @@ public sealed partial class ElectroMouseSystem : EntitySystem
             _popup.PopupEntity(Loc.GetString("Цель должна быть живым существом."), uid, uid);
             return;
         }
-        if (!TryComp<TransformComponent>(target, out var xform))
+        if (!HasComp<TransformComponent>(target))
             return;
         args.Handled = true;
 
@@ -569,9 +569,9 @@ public sealed partial class ElectroMouseSystem : EntitySystem
         var maxDrained = pnb.MaxSupply;
         var input = Math.Min(Math.Min(available, required / 0.001f), maxDrained);
         if (HasComp<ApcComponent>(target))
-            input = input * 10;
+            input *= 10;
         if (HasComp<SmesComponent>(target))
-            input = input * 2;
+            input *= 2;
         var output = input * 0.0001f;
 
         AddEnergy(uid, component, output);

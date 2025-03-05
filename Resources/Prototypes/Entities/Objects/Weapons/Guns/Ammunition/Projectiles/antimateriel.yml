@@ -9,5 +9,10 @@
       types:
         Piercing: 30
         Structural: 30
+        Piercing: 75
+        Structural: 226
+    penetrationThreshold: 360
+    penetrationDamageTypeRequirement:
+    - Structural
   - type: StaminaDamageOnCollide
-    damage: 35
+    damage: 60

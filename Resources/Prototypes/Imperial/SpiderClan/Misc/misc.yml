@@ -27,6 +27,9 @@
   components:
   - type: PresetIdCard
     job: Ninja
+  - type: IdCard
+    jobIcon: SpiderClanNinjaJobIcon
+    jobTitle: job-name-ninja
   - type: Access
     tags:
     - Ninja

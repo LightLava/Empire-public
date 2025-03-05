@@ -198,3 +198,15 @@
     sprite: Imperial/DeadSector/masks/LMMY.rsi
   - type: GasMaskFullProtection
     tolerableRadiation: 1.5
+
+- type: entity
+  id: CamouflageMask
+  parent: ClothingMaskBase
+  name: camouflage mask
+  suffix: DeadSector
+  description: A simple mask that hides your face will not protect you from foreign gases.
+  components:
+  - type: Sprite
+    sprite: Imperial/DeadSector/masks/camouflage.rsi
+  - type: Clothing
+    sprite: Imperial/DeadSector/masks/camouflage.rsi

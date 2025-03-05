@@ -209,3 +209,5 @@ ent-SmartFridge = Умный холодильник
     .suffix = { "" }
 ent-VendingMachineChemicalsSyndicate = СиндиХим
     .desc = Я надеюсь, что он сделан не из свежевыжатых синди.
+ent-VendingMachinePride = ПрограммистоМат
+    .desc = Все цвета языков программирования объеденились в этот автомат. От C#-па до Rust-а.
