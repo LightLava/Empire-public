@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingOuterStorageBase
+  parent: ClothingOuterCoatDetective
   id: ClothingOuterCoatDetectiveDark
   name: noir trenchcoat
   description: A hard-boiled private investigator's dark trenchcoat.

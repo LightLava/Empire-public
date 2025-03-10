@@ -1,6 +1,6 @@
 - type: entity
   id: ClothingHeadHelmetOpsCore
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ClothingHeadHardsuitBase , ClothingHeadSuitWithLightBase]
   name: fire helmet
   description: An atmos tech's best friend. Provides some heat resistance and looks cool.
   suffix: DeadSector

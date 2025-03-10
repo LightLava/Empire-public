@@ -36,7 +36,7 @@
     clothingPrototype: ClothingHeadHardsuitStormTrooper
 
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ClothingHeadHardsuitBase , ClothingHeadSuitWithLightBase]
   id: ClothingHeadHardsuitStormTrooper
   noSpawn: true
   name: stormtrooper hardsuit helmet

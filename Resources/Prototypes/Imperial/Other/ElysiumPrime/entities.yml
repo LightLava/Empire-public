@@ -39,7 +39,7 @@
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsFederation
-  suffix: ЗАКРЫТ, Elysium_Prime
+  suffix: ЗАКРЫТ, ElysiumPrime
   components:
   - type: AccessReader
     access: [["Federation"]]
@@ -51,7 +51,7 @@
   parent: TableBase
   name: reinforced table
   description: A square piece of metal standing on four metal legs.
-  suffix: Elysium_Prime
+  suffix: ElysiumPrime
   components:
   - type: Sprite
     sprite: Imperial/Other/ElysiumPrime/Objects/Tables/reinforced.rsi
@@ -97,7 +97,7 @@
   parent: TableBase
   name: reinforced glass table
   description: A square piece of glass, standing on four metal legs.
-  suffix: Elysium_Prime
+  suffix: ElysiumPrime
   components:
   - type: Sprite
     sprite: Imperial/Other/ElysiumPrime/Objects/Tables/reinforced-glass.rsi
@@ -154,7 +154,7 @@
   name: steel chair
   id: BlackSteelChair
   description: You're sitting on it. Either by your own free will or by compulsion.
-  suffix: Elysium_Prime
+  suffix: ElysiumPrime
   parent: ChairBase
   components:
   - type: Sprite
@@ -169,7 +169,7 @@
 - type: entity
   id: AirlockMaintElysiumFederation
   parent: Airlock
-  suffix: Elysium_Prime
+  suffix: ElysiumPrime
   name: airlock of the Federation
   components:
   - type: Sprite
@@ -178,7 +178,7 @@
 - type: entity
   id: AirlockElysiumFederationLocked
   parent: Airlock
-  suffix: ЗАКРЫТ, Elysium_Prime
+  suffix: ЗАКРЫТ, ElysiumPrime
   name: airlock of the Federation
   description: It looks very capitalist.
   components:
@@ -191,7 +191,7 @@
 - type: entity
   id: AirlockElysiumFederation
   parent: Airlock
-  suffix: Elysium_Prime
+  suffix: ElysiumPrime
   name: airlock of the Federation
   description: It looks very capitalist.
   components:
@@ -203,7 +203,7 @@
 - type: entity
   id: BannerElysiumFederationCommand
   parent: BannerBase
-  suffix: Elysium_Prime
+  suffix: ElysiumPrime
   name: command banner of the Federation
   components:
   - type: Sprite
@@ -213,7 +213,7 @@
 - type: entity
   id: BannerElysiumFederationCitizen
   parent: BannerBase
-  suffix: Elysium_Prime
+  suffix: ElysiumPrime
   name: citizen banner of the Federation
   components:
   - type: Sprite
@@ -223,7 +223,7 @@
 - type: entity
   id: BannerElysiumFederationSecurity
   parent: BannerBase
-  suffix: Elysium_Prime
+  suffix: ElysiumPrime
   name: security banner of the Federation
   components:
   - type: Sprite
@@ -235,7 +235,7 @@
   id: FederationHandyFlag
   name: federation handheld flag
   description: The flag of the most corrupt Federation in the galaxy.
-  suffix: Elysium_Prime
+  suffix: ElysiumPrime
   components:
   - type: Sprite
     sprite: Imperial/Other/ElysiumPrime/Misc/flags.rsi
@@ -251,8 +251,11 @@
   parent: IDCardStandard
   name: Federation ID card
   description: Identification Card.
-  suffix: Elysium_Prime
+  suffix: ElysiumPrime
   components:
+    - type: IdCard
+      jobIcon: FederationJobIcon
+      jobTitle: job-name-federation
     - type: Access
       tags:
       - Federation
@@ -265,7 +268,7 @@
         - idcard
       sprite: Imperial/Other/ElysiumPrime/Misc/card.rsi
     - type: PresetIdCard
-      job: #none
+      job: null
 
 #Federation PDA
 - type: entity
@@ -273,7 +276,7 @@
   parent: BaseCustomPDA
   name: Federation PDA
   description: Smells like patriotism!
-  suffix: Elysium_Prime
+  suffix: ElysiumPrime
   components:
   - type: Sprite
     sprite: Imperial/Other/ElysiumPrime/Misc/pda.rsi
@@ -303,7 +306,7 @@
   id: BoxFolderFederation
   name: Federation folder
   parent: BoxFolderBase
-  suffix: Elysium_Prime
+  suffix: ElysiumPrime
   description: Contains all the corruption schemes going on behind the scenes.
   components:
   - type: Sprite
@@ -319,7 +322,7 @@
   parent: BaseGateway
   id: FederationGateway
   name: Federation gateway
-  suffix: Elysium_Prime
+  suffix: ElysiumPrime
   description: You can't run away from the Federation.
   components:
   - type: Sprite

@@ -22,12 +22,12 @@ namespace Content.Server.Paper
         }
         private void OnInit(EntityUid uid, EverythingStampComponent everythingStampComp, ComponentInit args)
         {
-            everythingStampComp.CollectedStamps.Add(new StampDisplayInfo{ StampedName = Loc.GetString("stamp-component-stamped-name-syndicate"), StampedColor = Color.FromHex("#850000") });
+            everythingStampComp.CollectedStamps.Add(new StampDisplayInfo { StampedName = Loc.GetString("stamp-component-stamped-name-syndicate"), StampedColor = Color.FromHex("#850000") });
         }
         private void OnInHandActivation(Entity<EverythingStampComponent> entity, ref UseInHandEvent args)
         {
-            int positionOfPreviousMode = -1;
-            int i = 0;
+            var positionOfPreviousMode = -1;
+            var i = 0;
             entity.Comp.CollectedStamps.ForEach(item =>
             {
                 positionOfPreviousMode = item.StampedName == entity.Comp.CurrentStampName ? i : positionOfPreviousMode;
@@ -65,11 +65,11 @@ namespace Content.Server.Paper
                 StampedColor = stamp.StampedColor
             };
         }
-        public bool TryCopyStamp(EntityUid uid, StampDisplayInfo stampInfo, string spriteStampState, EverythingStampComponent EverythingStampComponent)
+        public bool TryCopyStamp(EntityUid uid, StampDisplayInfo stampInfo, string spriteStampState, EverythingStampComponent comp)
         {
-            bool ifAlreadyInCollected = false;
-            EverythingStampComponent.CollectedStamps.ForEach(item => ifAlreadyInCollected = ifAlreadyInCollected || item.StampedName == stampInfo.StampedName);
-            if (!ifAlreadyInCollected) EverythingStampComponent.CollectedStamps.Add(stampInfo);
+            var ifAlreadyInCollected = false;
+            comp.CollectedStamps.ForEach(item => ifAlreadyInCollected = ifAlreadyInCollected || item.StampedName == stampInfo.StampedName);
+            if (!ifAlreadyInCollected) comp.CollectedStamps.Add(stampInfo);
             return ifAlreadyInCollected;
         }
     }

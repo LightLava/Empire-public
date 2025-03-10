@@ -718,6 +718,7 @@
     - type: RandomMetadata
       nameSegments:
       - names_clown
+    # Imperial Space Crew Skils Start
     - type: CrewSkills
       skills:
         - skillBotany
@@ -725,7 +726,8 @@
         - skillBaseConstraction
         - skillClownJoker
         - skillPiloting
-      
+    # Imperial Space Crew Skils End
+
 - type: randomHumanoidSettings
   id: VisitorJanitor
   parent: VisitorCivilian
@@ -1270,6 +1272,8 @@
       name: ghost-role-information-syndie-disaster-victim-name
       description: ghost-role-information-syndie-disaster-victim-description
       rules: ghost-role-information-freeagent-rules
+      mindRoles:
+      - MindRoleGhostRoleFreeAgent
       raffle:
         settings: short
     - type: Loadout

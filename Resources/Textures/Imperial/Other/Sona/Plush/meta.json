@@ -7,9 +7,16 @@
       "y": 32
     },
       "states": [
-
-        {
-            "name": "AdriPl"
-        }
+      {
+          "name": "icon"
+      },
+      {
+          "name": "inhand-right",
+          "directions": 4
+      },
+      {
+          "name": "inhand-left",
+          "directions": 4
+      }
       ]
 }

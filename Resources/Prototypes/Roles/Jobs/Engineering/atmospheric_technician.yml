@@ -16,7 +16,10 @@
   - Engineering
   - External
   - Atmospherics
-  special: #Imperial add
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FirefighterDay
+    prototype: FireAxe
   - !type:AddImplantSpecial #Imperial add
     implants: [ MindShieldImplant ] #Imperial add
 

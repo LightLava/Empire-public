@@ -1,5 +1,5 @@
 # SURVEILLANCE
-- type: construction  
+- type: construction
   name: Камера видеонаблюдения # Imperial Recipes Locale
   id: camera
   graph: SurveillanceCamera
@@ -714,6 +714,20 @@
   icon:
     sprite: Structures/Piping/Atmospherics/heatexchanger.rsi
     state: heStraight
+
+- type: construction
+  id: HeatExchangerBend
+  name: radiator bend
+  description: Transfers heat between the pipe and its surroundings.
+  graph: GasBinary
+  startNode: start
+  targetNode: bendradiator
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: Structures/Piping/Atmospherics/heatexchanger.rsi
+    state: heBend
 
 # ATMOS TRINARY
 - type: construction

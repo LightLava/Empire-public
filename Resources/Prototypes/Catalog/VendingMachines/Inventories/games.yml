@@ -15,4 +15,9 @@
     GrassBattlemap: 1
     PaperCNCSheet: 6
     MysteryFigureBox: 2
+    FumoBoxCrook: 2 # Imperial Space | Fumo plushies @crookielv
     BooksBag: 3
+  contrabandInventory:
+    Basketball: 1
+    FoodSnackBoritos: 3
+    DrinkSpaceMountainWindCan: 3

@@ -34,7 +34,7 @@ public sealed class ElectroMouseSystem : EntitySystem
             var playerPos = _transform.GetWorldPosition(Transform(uid), xformQuery);
             var playerMap = Transform(uid).MapID;
 
-            bool canSee = false;
+            var canSee = false;
 
             if (component.IsSpeed)
                 canSee = true;

@@ -134,7 +134,7 @@
 - type: entity
   noSpawn: true
   id: ClothingHeadHardsuitCCAgent
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ClothingHeadHardsuitBase , ClothingHeadSuitWithLightBase]
   name: Special Agent helmet
   description: For Special Agents.
   components:
