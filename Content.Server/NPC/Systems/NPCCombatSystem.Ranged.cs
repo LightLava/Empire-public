@@ -202,6 +202,11 @@ public sealed partial class NPCCombatSystem
                 return;
             }
 
+            // Imperial Turret Fix
+#pragma warning disable RA0002
+            gun.Target = comp.Target;
+#pragma warning restore RA0002
+            // Imperial Turret Fix
             _gun.AttemptShoot(uid, gunUid, gun, targetCordinates);
         }
     }

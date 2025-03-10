@@ -16,3 +16,7 @@
     ClothingNeckScarfStripedBrown: 3
     ClothingShoesBootsWinterCargo: 2
     ClothingOuterArmorCargoJacket: 2 #Imperial edit
+  contrabandInventory:
+    ToyFigurineCargoTech: 1
+    ToyFigurineSalvage: 1
+    ToyFigurineQuartermaster: 1

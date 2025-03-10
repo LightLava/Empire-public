@@ -1,0 +1,243 @@
+- type: entity
+  id: XenoStructuralGel
+  name: xeno structural gel
+  description: A black liquid substance.
+  placement:
+    mode: SnapgridCenter
+    snap:
+      - Wall
+  components:
+    - type: MeleeSound
+      soundGroups:
+        Brute:
+          path:
+            "/Audio/Weapons/slash.ogg"
+    - type: Sprite
+      sprite: Imperial/Crook/Xeno/structuralgel.rsi
+      drawdepth: WallMountedItems
+      layers:
+        - state: icon-1
+          map: ["spiderWebLayer"]
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.SpiderWebVisuals.Variant:
+          spiderWebLayer:
+            1:  {state: icon-1}
+            2:  {state: icon-3}
+    - type: Clickable
+    - type: Transform
+      anchored: true
+    - type: Physics
+    - type: Fixtures
+      fixtures:
+        fix1:
+          hard: false
+          density: 7
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.5,-0.5,0.5,0.5"
+          layer:
+          - MidImpassable
+    - type: Damageable
+      damageModifierSet: Wood
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 32
+        behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - type: Temperature
+      heatDamage:
+        types:
+          Heat: 5
+      coldDamage: {}
+      coldDamageThreshold: 0
+    - type: Flammable
+      fireSpread: true
+      damage:
+        types:
+          Heat: 10
+    - type: Reactive
+      groups:
+        Flammable: [Touch]
+        Extinguish: [Touch]
+    - type: SpiderWebObject
+    - type: SpeedModifierContacts
+      walkSpeedModifier: 0.5
+      sprintSpeedModifier: 0.5
+      ignoreWhitelist:
+        components:
+            - IgnoreSpiderWeb
+
+- type: entity
+  parent: XenoStructuralGel
+  id: XenoStructuralGelAlt
+  name: xeno structural gel
+  placement:
+    mode: SnapgridCenter
+    snap:
+      - Wall
+  components:
+    - type: Sprite
+      sprite: Imperial/Crook/Xeno/structuralgel.rsi
+      drawdepth: WallMountedItems
+      layers:
+        - state: icon-3
+          map: ["spiderWebLayer"]
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.SpiderWebVisuals.Variant:
+          spiderWebLayer:
+            1:  {state: icon-2}
+            2:  {state: icon-3}
+
+- type: entity
+  id: XenoEgg
+  parent: [PresentBase, BaseItem]
+  name: xeno egg
+  description: Holds a something danger.
+  suffix: 
+  components:
+  - type: Item
+    size: Huge
+  - type: Sprite
+    sprite: Imperial/Crook/Xeno/itemegg.rsi
+    layers:
+      - state: icon
+  - type: SpawnItemsOnUse
+    items:
+      - id: XenoEggUncovered
+      - id: FoodMeatSlime
+        orGroup: GiftPool
+        prob: .01
+      - id: XenoFaceGrabber
+        orGroup: GiftPool
+        prob: .0001
+    sound:
+      path: /Audio/Imperial/Crook/uncoveregg.ogg
+- type: entity
+  id: XenoEggUncovered
+  categories: [ HideSpawnMenu ]
+  parent: BaseItem
+  name: xeno egg
+  description: There used to be a something danger in it.
+  components:
+  - type: Item
+    size: Huge
+  - type: Sprite
+    sprite: Imperial/Crook/Xeno/itemegg.rsi
+    layers:
+      - state: icon-uncover
+  - type: Tag
+    tags:
+    - Trash
+  - type: SpaceGarbage
+
+- type: entity
+  id: XenoEggPlaced
+  name: xeno egg
+  description: Holds a something danger.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: RangedDamageSound
+    soundGroups:
+      Brute:
+        collection:
+          MeatBulletImpact
+    soundTypes:
+      Heat:
+        collection:
+          MeatLaserImpact
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: Imperial/Crook/Xeno/xenoegg.rsi
+    state: icon
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+          - FullTileMask
+        layer:
+          - WallLayer
+        density: 1000
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 50
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              XenoEgg:
+                min: 0
+                max: 1
+
+- type: entity
+  id: XenoEggPlacedUncovered
+  name: xeno egg
+  description: There used to be a something danger in it.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: RangedDamageSound
+    soundGroups:
+      Brute:
+        collection:
+          MeatBulletImpact
+    soundTypes:
+      Heat:
+        collection:
+          MeatLaserImpact
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: Imperial/Crook/Xeno/uncovered_egg.rsi
+    state: icon
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+          - FullTileMask
+        layer:
+          - WallLayer
+        density: 1000
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 25
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]

@@ -6,6 +6,25 @@ ent-ClothingUniformJumpsuitElysiumSecurity = рубашка офицера
     .desc = Красиво сшитый комбинезон офицера.
 ent-ClothingUniformJumpsuitElysiumSecurityAlt = водолазка офицера
     .desc = Офицерская водолазка. Удобная и приятная на ощупь.
+ent-ClothingUniformJumpsuitElysiumCitizenAlt = комбинезон гражданина
+    .desc = Комбинезон гражданина Федерации
+ent-ClothingUniformJumpsuitElysiumCitizenLoyal = деловой костюм
+    .desc = Удобный костюм, предназначенный для лояльной группы граждан Федерации. Нося его, вы чувствуете, как ваше сердце наполняется теплом патриотизма.
+ent-ClothingUniformJumpsuitElysiumCitizenWork = рабочий комбинезон
+    .desc = Удобный костюм, предназначенный для тяжелых и трудоемких работ. Имеет нашивку Федерации.
+ent-ClothingUniformJumpsuitElysiumDepartamentAdmin = деловой костюм
+    .desc = Удобный костюм, предназначенный для управляющих. Бедность вам позавидует.
+ent-ClothingUniformJumpsuitElysiumDepartamentMigration = деловой костюм
+    .desc = Удобный костюм, предназначенный для сотрудников миграционной службы. Бедность вам позавидует.
+ent-ClothingUniformJumpsuitElysiumDepartamentWorker = деловой костюм
+    .desc = Удобный костюм, предназначенный для сотрудников. Бедность вам позавидует.
+ent-ClothingUniformJumpsuitElysiumDepartamentWorkerAlt = деловой костюм
+    .desc = Удобный костюм, предназначенный для сотрудников. Бедность вам позавидует.
+ent-ClothingUniformJumpsuitElysiumDepartamentWorkerAlter = деловой костюм
+    .desc = Удобный костюм, предназначенный для сотрудников. Бедность вам позавидует.
+ent-ClothingUniformJumpsuitElysiumSecurityPatrol = тактический комбинезон
+    .desc = Удобный костюм, предназначенный для патрульных Федерации. Побейте нарушителей!
+
 
 ent-ClothingOuterStorageElysium = РПС учёных
     .desc = Полезная, тактическая разгрузка.

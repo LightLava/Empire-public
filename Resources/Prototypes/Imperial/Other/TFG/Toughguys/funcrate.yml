@@ -23,6 +23,9 @@
       - id: PlushieHOP
       - id: PlushieNuclearmedic
       - id: PlushiePassenger
+      - id: PlushieHlimmy
+      - id: PlushieTaylor
+      - id: PlushieVenya
 
 - type: cargoProduct
   id: FunPlushieCommunity

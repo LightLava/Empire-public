@@ -10,11 +10,18 @@
   startingGear: AtmosphericTechnicianGear
   icon: "JobIconAtmosphericTechnician"
   supervisors: job-supervisors-ce
+  canBeAntag: false #Imperial add
   access:
   - Maintenance
   - Engineering
   - External
   - Atmospherics
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FirefighterDay
+    prototype: FireAxe
+  - !type:AddImplantSpecial #Imperial add
+    implants: [ MindShieldImplant ] #Imperial add
 
 - type: startingGear
   id: AtmosphericTechnicianGear
