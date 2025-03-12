@@ -1,0 +1,45 @@
+- type: job
+  id: Magos
+  name: job-name-magos
+  description: job-description-magos
+  playTimeTracker: JobMagos
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobTAScientist
+      time: 10800
+    - !type:RoleTimeRequirement
+      role: JobTAEngineer
+      time: 10800
+    - !type:AgeRequirement
+      requiredAge: 20
+  weight: 10
+  startingGear: MagosGear
+  icon: "JobIconResearchDirector"
+  supervisors: job-supervisors-captain
+  canBeAntag: false
+  access:
+  - Research
+  - Command
+  - Maintenance
+  - ResearchDirector
+  - Brig
+  - Cryogenics
+  - Engineering
+  - External
+  - ChiefEngineer
+  - Atmospherics
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+
+- type: startingGear
+  id: MagosGear
+  equipment:
+    id: RnDPDA
+    ears: ClothingHeadsetRD
+  storage:
+    back:
+    - Flash

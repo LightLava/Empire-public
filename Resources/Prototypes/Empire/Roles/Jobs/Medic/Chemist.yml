@@ -1,0 +1,25 @@
+- type: job
+  id: EmpireChemist
+  name: job-name-empire-chemist
+  description: job-description-empire-chemist
+  playTimeTracker: JobEmpireChemist
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobEmpireMedico
+      time: 7200 
+  startingGear: EmpireChemistGear
+  icon: "JobIconChemist"
+  supervisors: job-supervisors-cmo
+  access:
+  - Medical
+  - Chemistry
+  - Maintenance
+
+- type: startingGear
+  id: EmpireChemistGear
+  equipment:
+    id: ChemistryPDA
+    ears: ClothingHeadsetMedical
+    belt: ChemBag
+    pocket1: HandLabeler
+    eyes: ClothingEyesGlassesChemical

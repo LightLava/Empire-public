@@ -1,0 +1,24 @@
+- type: job
+  id: WorkerOfWorkshop
+  name: job-name-wow
+  description: job-description-wow
+  playTimeTracker: JobWoW
+  startingGear: WoWGear
+  icon: "JobIconCargoTechnician"
+  supervisors: job-supervisors-qm
+  access:
+  - Cargo
+  - Maintenance
+  extendedAccess:
+  - Salvage
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: BoxingDay
+    prototype: BoxCardboard
+
+- type: startingGear
+  id: WoWhGear
+  equipment:
+    id: CargoPDA
+    ears: ClothingHeadsetCargo
+    pocket1: AppraisalTool

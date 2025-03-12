@@ -7,6 +7,7 @@
   - CargoTechnician
   - Quartermaster
   - SalvageSpecialist
+  editorHidden: true # Imperial Space(Empire) 
 
 - type: department
   id: Civilian
@@ -32,6 +33,7 @@
   - Visitor
   - Zookeeper
   - ServiceWorker
+  editorHidden: true # Imperial Space(Empire) 
 
 - type: department
   id: CentralCommand
@@ -75,6 +77,7 @@
   # - DeathSquad
   - Adjutant
   primary: false
+  editorHidden: true # Imperial Space(Empire) 
   weight: 100
 
 - type: department
@@ -88,6 +91,7 @@
   - StationEngineer
   - TechnicalAssistant
   - SeniorEngineer # imperial space senior roles
+  editorHidden: true # Imperial Space(Empire) 
 
 - type: department
   id: Medical
@@ -102,6 +106,7 @@
   - Psychologist
   - Paramedic
   - SeniorPhysician # imperial space senior roles
+  editorHidden: true # Imperial Space(Empire) 
 
 - type: department
   id: Security
@@ -117,6 +122,7 @@
   - Warden
   - SeniorOfficer # imperial space senior roles
   - Brigmedic # imperial Brigmedic
+  editorHidden: true # Imperial Space(Empire) 
 
 - type: department
   id: Science
@@ -128,6 +134,7 @@
   - Scientist
   - ResearchAssistant
   - SeniorResearcher # imperial space senior roles
+  editorHidden: true # Imperial Space(Empire) 
 
 - type: department
   id: Silicon
@@ -137,6 +144,7 @@
   roles:
   - Borg
   - StationAi
+  editorHidden: true # Imperial Space(Empire) 
 
 - type: department
   id: Specific
@@ -150,3 +158,4 @@
   - Zookeeper
   - Psychologist
   primary: false
+  editorHidden: true # Imperial Space(Empire) 

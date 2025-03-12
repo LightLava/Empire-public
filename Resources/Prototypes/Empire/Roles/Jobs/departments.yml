@@ -1,0 +1,79 @@
+- type: department
+  id: Fabric
+  name: department-Fabric
+  description: department-Fabric-description
+  color: "#A46106"
+  roles:
+  - WorkerOfWorkshop
+  - HeadOfWorkshop
+
+- type: department
+  id: EmpireService
+  name: department-Empire-Service
+  description: department-Empire-Service-description
+  color: "#9FED58"
+  weight: -10
+  roles:
+  - EmpireBartender
+  - EmpireBotanist
+  - EmpireChef
+
+- type: department
+  id: EmpireCommand
+  name: department-Empire-Command
+  description: department-Empire-Command-description
+  color: "#334E6D"
+  roles:
+  - Centurion
+  - Option
+  - EmpireChiefMedicalOfficer
+  - Decurion
+  - Inquisitor
+  - Capellan
+  - Magos
+  - HeadOfWorkshop
+  primary: false
+  weight: 100
+
+- type: department
+  id: Techno-Arcanum
+  name: department-Techno-Arcanum
+  description: department-Techno-Arcanum-description
+  color: "#EFB341"
+  roles:
+  - Magos
+  - TAEngineer
+  - TAScientist
+
+- type: department
+  id: EmpireMedical
+  name: department-Empire-Medical
+  description: department-Empire-Medical-description
+  color: "#52B4E9"
+  roles:
+  - EmpireChemist
+  - EmpireChiefMedicalOfficer
+  - EmpireMedico
+
+- type: department
+  id: Guard
+  name: department-Guard
+  description: department-Guard-description
+  color: "#DE3A3A"
+  weight: 20
+  roles:
+  - Decurion
+  - Triary
+  - Gestat
+  - Legioner
+
+- type: department
+  id: Colonists
+  name: department-Colonists
+  description: department-Colonists-description
+  color: "#9FED58"
+  weight: 10
+  roles:
+  - HeadColonist
+  - Colonist
+  primary: false

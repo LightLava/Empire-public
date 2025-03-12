@@ -1,0 +1,63 @@
+- type: playTimeTracker
+  id: JobHeadColonist
+
+- type: playTimeTracker
+  id: JobColonist
+
+- type: playTimeTracker
+  id: JobLegioner
+
+- type: playTimeTracker
+  id: JobGestat
+
+- type: playTimeTracker
+  id: JobTriary
+
+- type: playTimeTracker
+  id: JobDecurion
+
+- type: playTimeTracker
+  id: JobEmpireMedico
+
+- type: playTimeTracker
+  id: JobEmpireChemist
+
+- type: playTimeTracker
+  id: JobEmpireCMO
+
+- type: playTimeTracker
+  id: JobHOW
+
+- type: playTimeTracker
+  id: JobWOW
+
+- type: playTimeTracker
+  id: JobMagos
+
+- type: playTimeTracker
+  id: JobTAEngineer
+
+- type: playTimeTracker
+  id: JobTAScientist
+
+- type: playTimeTracker
+  id: JobEmpireBartender
+
+- type: playTimeTracker
+  id: JobEmpireChef
+
+- type: playTimeTracker
+  id: JobEmpireBotanist
+
+- type: playTimeTracker
+  id: JobCenturion
+
+- type: playTimeTracker
+  id: JobOption
+
+- type: playTimeTracker
+  id: JobInquisitor
+
+- type: playTimeTracker
+  id: JobCapellan
+
