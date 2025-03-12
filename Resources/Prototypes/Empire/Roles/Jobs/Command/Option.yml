@@ -1,0 +1,73 @@
+- type: job
+  id: Option
+  name: job-name-option
+  description: job-description-option
+  playTimeTracker: JobOption
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 24400
+    - !type:DepartmentTimeRequirement
+      department: EmpireMedical
+      time: 3600
+    - !type:DepartmentTimeRequirement
+      department: Guard
+      time: 3600 
+    - !type:DepartmentTimeRequirement
+      department: Fabric
+      time: 3600 
+    - !type:DepartmentTimeRequirement
+      department: Techno-Arcanum
+      time: 3600 
+    - !type:DepartmentTimeRequirement
+      department: EmpireService
+      time: 3600 
+    - !type:AgeRequirement
+      requiredAge: 20
+  weight: 20
+  startingGear: OptionGear
+  icon: "JobIconCaptain"
+  joinNotifyCrew: true
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  access:
+  - Command
+  - HeadOfPersonnel
+  - Bar
+  - Service
+  - Maintenance
+  - Janitor
+  - Theatre
+  - Kitchen
+  - Chapel
+  - Hydroponics
+  - External
+  - Cryogenics
+  - Chemistry
+  - Engineering
+  - Research
+  - Detective
+  - Salvage
+  - Security
+  - Brig
+  - Lawyer
+  - Cargo
+  - Atmospherics
+  - Medical
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+
+- type: startingGear
+  id: OptionGear
+  equipment:
+    shoes: ClothingShoesBootsLaceup
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsGlovesCaptain
+    id: CaptainPDA
+    ears: ClothingHeadsetAltCommand
+  storage:
+    back:
+    - Flash

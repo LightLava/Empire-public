@@ -1,0 +1,23 @@
+- type: job
+  id: Colonist
+  name: job-name-colonist
+  description: job-description-colonist
+  playTimeTracker: JobColonist
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 7200
+  icon: "JobIconShaftMiner"
+  startingGear: SalvageSpecialistGear
+  supervisors: job-supervisors-qm
+  access:
+  - Cargo
+  - Salvage
+  - Maintenance
+  - External
+
+- type: startingGear
+  id: ColonistGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
+    id: SalvagePDA
+    ears: ClothingHeadsetCargo

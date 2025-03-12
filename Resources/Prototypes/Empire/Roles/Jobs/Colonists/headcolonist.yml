@@ -1,0 +1,49 @@
+- type: job
+  id: HeadColonist
+  name: job-name-head-colonist
+  description: job-description-head-colonist
+  playTimeTracker: JobHeadColonist
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobDecurion
+      time: 7200 
+    - !type:RoleTimeRequirement
+      role: JobOption
+      time: 7200 
+    - !type:RoleTimeRequirement
+      role: JobEmpireChiefMedicalOfficer
+      time: 7200 
+    - !type:RoleTimeRequirement
+      role: JobMagos
+      time: 7200
+    - !type:OverallPlaytimeRequirement
+      time: 90000 
+    - !type:AgeRequirement
+      requiredAge: 20
+  weight: 20
+  startingGear: HeadColonistGear
+  icon: "JobIconCaptain"
+  joinNotifyCrew: false
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+  - Cargo
+  - Command
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+
+- type: startingGear
+  id: HeadColonistGear
+  equipment:
+    shoes: ClothingShoesBootsLaceup
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsGlovesCaptain
+    id: CaptainPDA
+    ears: ClothingHeadsetAltCommand
+  storage:
+    back:
+    - Flash

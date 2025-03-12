@@ -1,0 +1,37 @@
+- type: job
+  id: Triary
+  name: job-name-triary
+  description: job-description-triary
+  playTimeTracker: JobTriary
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Guard
+      time: 21600
+  startingGear: TriaryGear
+  icon: "JobIconWarden"
+  supervisors: job-supervisors-hos
+  canBeAntag: false
+  access:
+  - Security
+  - Brig
+  - Armory
+  - Maintenance
+  - Service
+  - External
+  - Detective
+  - Cryogenics
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: TriaryGear
+  equipment:
+    eyes: ClothingEyesGlassesSecurity
+    id: WardenPDA
+    ears: ClothingHeadsetSecurity
+    pocket1: WeaponPistolMk58
+  storage:
+    back:
+    - Flash
+    - MagazinePistol

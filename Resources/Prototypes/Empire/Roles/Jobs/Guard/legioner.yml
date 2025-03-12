@@ -1,0 +1,33 @@
+- type: job
+  id: Legioner
+  name: job-name-legioner
+  description: job-description-legioner
+  playTimeTracker: JobLegioner
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 21600 #Imperial role timers
+  startingGear: LegionerGear
+  icon: "JobIconSecurityOfficer"
+  supervisors: job-supervisors-hos
+  canBeAntag: true
+  access:
+  - Security
+  - Brig
+  - Maintenance
+  - Service
+  - External
+  - Cryogenics
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: LegionerGear
+  equipment:
+    eyes: ClothingEyesGlassesSecurity
+    ears: ClothingHeadsetSecurity
+    pocket1: WeaponPistolMk58
+  storage:
+    back:
+    - Flash
+    - MagazinePistol

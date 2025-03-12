@@ -1,0 +1,19 @@
+- type: job
+  id: TAScientist
+  name: job-name-TA-scientist
+  description: job-description-TA-scientist
+  playTimeTracker: JobTAScientist
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 7200
+  startingGear: TAScientistGear
+  icon: "JobIconScientist"
+  supervisors: job-supervisors-rd
+  access:
+  - Research
+  - Maintenance
+
+- type: startingGear
+  id: TAScientistGear
+  equipment:
+    ears: ClothingHeadsetScience
