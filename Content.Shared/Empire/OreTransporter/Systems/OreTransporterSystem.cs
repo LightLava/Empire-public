@@ -56,12 +56,9 @@ public sealed class OreTransporterSystem : EntitySystem
         
         if(HasComp<TransportableOreComponent>(args.Used))
         {
-            if (!TryComp<TransportableOreComponent>(args.Used, out var ore))
-                return;
-            if (!TryComp<StorageComponent>(ent.Comp.Reciver, out var storage))
-                return;
-            if (!TryComp<StackComponent>(args.Used, out var num))
-                return;
+            var ore = EnsureComp<TransportableOreComponent>(args.Used);
+            var storage = EnsureComp<StorageComponent>(args.Used);
+            var num = EnsureComp<StackComponent>(args.Used);
 
             if (!_storage.HasSpace((ent.Comp.Reciver, storage)))
                 return;
@@ -74,8 +71,7 @@ public sealed class OreTransporterSystem : EntitySystem
         }
         if(HasComp<PointsWithdrawComponent>(args.Used))
         {
-            if (!TryComp<PointsWithdrawComponent>(args.Used, out var num2))
-                return;
+            var num2 = EnsureComp<PointsWithdrawComponent>(args.Used);
             
             _popup.PopupClient(Loc.GetString("points-withdraw-value-insert"), args.User, args.User);
 
