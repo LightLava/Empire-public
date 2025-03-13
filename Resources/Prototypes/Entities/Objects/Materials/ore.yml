@@ -4,6 +4,7 @@
   id: OreBase
   description: A piece of unrefined ore.
   components:
+  - type: TransportableOre # Empire transporter
   - type: Sprite
     sprite: Objects/Materials/ore.rsi
   - type: Item
