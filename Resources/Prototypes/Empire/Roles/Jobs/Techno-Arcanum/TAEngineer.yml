@@ -1,0 +1,24 @@
+- type: job
+  id: TAEngineer
+  name: job-name-TA-engineer
+  description: job-description-TA-engineer
+  playTimeTracker: JobTAEngineer
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 7200
+  startingGear: TAEngineerGear
+  icon: "JobIconStationEngineer"
+  supervisors: job-supervisors-ce
+  access:
+  - Maintenance
+  - Engineering
+  - External
+  extendedAccess:
+  - Atmospherics
+
+- type: startingGear
+  id: TAEngineerGear
+  equipment:
+    eyes: ClothingEyesGlassesMeson
+    belt: ClothingBeltUtilityEngineering
+    ears: ClothingHeadsetEngineering

@@ -1,0 +1,34 @@
+- type: job
+  id: Gestat
+  name: job-name-gestat
+  description: job-description-gestat
+  playTimeTracker: JobGestat
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Guard
+      time: 7200
+  startingGear: GestatGear
+  icon: "JobIconSecurityOfficer"
+  supervisors: job-supervisors-hos
+  canBeAntag: true
+  access:
+  - Security
+  - Brig
+  - Maintenance
+  - Service
+  - External
+  - Cryogenics
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: GestatGear
+  equipment:
+    eyes: ClothingEyesGlassesSecurity
+    ears: ClothingHeadsetSecurity
+    pocket1: WeaponPistolMk58
+  storage:
+    back:
+    - Flash
+    - MagazinePistol

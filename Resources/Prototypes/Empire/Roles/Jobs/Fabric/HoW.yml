@@ -1,0 +1,45 @@
+- type: job
+  id: HeadOfWorkshop
+  name: job-name-how
+  description: job-description-how
+  playTimeTracker: JobHoW
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobWoW
+      time: 3600
+    - !type:DepartmentTimeRequirement
+      department: Fabric
+      time: 10800
+    - !type:AgeRequirement
+      requiredAge: 20
+  weight: 10
+  startingGear: HoWGear
+  icon: "JobIconQuarterMaster"
+  supervisors: job-supervisors-captain
+  canBeAntag: false
+  access:
+  - Cargo
+  - Salvage
+  - Quartermaster
+  - Maintenance
+  - External
+  - Command
+  - Brig
+  - Cryogenics
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+
+- type: startingGear
+  id: HoWGear
+  equipment:
+    id: QuartermasterPDA
+    ears: ClothingHeadsetQM
+    belt: BoxFolderClipboard
+    pocket1: AppraisalTool
+  storage:
+    back:
+    - Flash

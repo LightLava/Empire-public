@@ -1,0 +1,46 @@
+- type: job
+  id: EmpireChiefMedicalOfficer
+  name: job-name-empire-cmo
+  description: job-description-empire-cmo
+  playTimeTracker: JobEmpireChiefMedicalOfficer
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobEmpireChemist
+      time: 7200
+    - !type:RoleTimeRequirement
+      role: JobEmpireMedico
+      time: 7200
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 20000
+    - !type:AgeRequirement
+      requiredAge: 20
+  weight: 10
+  startingGear: EmpireCMOGear
+  icon: "JobIconChiefMedicalOfficer"
+  supervisors: job-supervisors-captain
+  canBeAntag: false
+  access:
+  - Medical
+  - Command
+  - Maintenance
+  - Chemistry
+  - ChiefMedicalOfficer
+  - Brig
+  - Cryogenics
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+
+- type: startingGear
+  id: EmpireCMOGear
+  equipment:
+    id: CMOPDA
+    ears: ClothingHeadsetCMO
+    belt: ClothingBeltMedicalFilled
+  storage:
+    back:
+    - Flash

@@ -1,0 +1,46 @@
+- type: job
+  id: Decurion
+  name: job-name-decurion
+  description: job-description-decurion
+  playTimeTracker: JobDecurion
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobTriary
+      time: 10800
+    - !type:AgeRequirement
+      requiredAge: 20
+  weight: 10
+  startingGear: DecurionGear
+  icon: "JobIconHeadOfSecurity"
+  supervisors: job-supervisors-captain
+  canBeAntag: false
+  access:
+  - HeadOfSecurity
+  - Command
+  - Brig
+  - Security
+  - Armory
+  - Maintenance
+  - Service
+  - External
+  - Detective
+  - Cryogenics
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+
+- type: startingGear
+  id: DecurionGear
+  equipment:
+    eyes: ClothingEyesGlassesSecurity
+    id: HoSPDA
+    gloves: ClothingHandsGlovesCombat
+    ears: ClothingHeadsetAltSecurity
+    pocket1: WeaponPistolMk58
+  storage:
+    back:
+    - Flash
+    - MagazinePistol
