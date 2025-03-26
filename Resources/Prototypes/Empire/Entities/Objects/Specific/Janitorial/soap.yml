@@ -8,7 +8,7 @@
     tags:
     - Soap
   - type: Sprite
-    sprite: Empire/Objects/Specific/Janitorial/soap.rsi
+    sprite: Empire/Entities/Objects/Specific/Janitorial/soap.rsi
     layers:
     - state: normal-4
       map: ["enum.SolutionContainerLayers.Fill"]
@@ -18,7 +18,7 @@
     changeColor: false
   - type: Appearance
   - type: Item
-    sprite: Empire/Objects/Specific/Janitorial/soap.rsi
+    sprite: Empire/Entities/Objects/Specific/Janitorial/soap.rsi
     storedRotation: -90
   - type: Slippery
   - type: StepTrigger
@@ -60,9 +60,6 @@
     solution: soap
   - type: DeleteOnSolutionEmpty
     solution: soap
-  - type: FlavorProfile
-    flavors:
-      - clean
   - type: Food
     solution: soap
   - type: BadFood
@@ -85,6 +82,9 @@
     fillBaseName: imperial-
   - type: Item
     heldPrefix: empire
+  - type: FlavorProfile
+    flavors:
+      - patriotic
   - type: SolutionContainerManager
     solutions:
       soap:
@@ -111,6 +111,9 @@
   - type: Slippery
     paralyzeTime: 3.0
     launchForwardsMultiplier: 1.2
+  - type: FlavorProfile
+    flavors:
+      - chaotic
   - type: Item
     heldPrefix: omega
   - type: SolutionContainerManager

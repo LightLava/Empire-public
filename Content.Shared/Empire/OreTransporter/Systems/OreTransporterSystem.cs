@@ -57,7 +57,7 @@ public sealed class OreTransporterSystem : EntitySystem
         if(HasComp<TransportableOreComponent>(args.Used))
         {
             var ore = EnsureComp<TransportableOreComponent>(args.Used);
-            var storage = EnsureComp<StorageComponent>(args.Used);
+            var storage = EnsureComp<StorageComponent>(ent.Comp.Reciver);
             var num = EnsureComp<StackComponent>(args.Used);
 
             if (!_storage.HasSpace((ent.Comp.Reciver, storage)))
